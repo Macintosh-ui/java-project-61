@@ -7,5 +7,7 @@
 #Asciinema of Calc game
 [![asciicast](https://asciinema.org/a/Q6fEVN0T7ZNkPIzhhSpPWWLJa.svg)](https://asciinema.org/a/Q6fEVN0T7ZNkPIzhhSpPWWLJa)
 
+#Asciinema of GCD game
+[![asciicast](https://asciinema.org/a/UE67cSvSGtfMTj8bQTXoHaaZ2.svg)](https://asciinema.org/a/UE67cSvSGtfMTj8bQTXoHaaZ2)
 
 [Maintainabllity]
