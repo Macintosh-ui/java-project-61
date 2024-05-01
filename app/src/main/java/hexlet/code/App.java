@@ -9,15 +9,19 @@ public class App {
         System.out.println("Please enter the game number and press Enter");
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
+        System.out.println("3 - Calc");
         System.out.println("0 - Exit");
-        int choosenNumber = numberChoose.nextInt();
-        if (choosenNumber == 1) {
+        int chosenNumber = numberChoose.nextInt();
+        if (chosenNumber == 1) {
             Cli.greeting();
         }
-        if (choosenNumber == 2) {
+        if (chosenNumber == 2) {
             Even.evenGame();
         }
-        if (choosenNumber == 0) {
+        if (chosenNumber == 3) {
+            Calc.calcGame();
+        }
+        if (chosenNumber == 0) {
            return;
        }
 
