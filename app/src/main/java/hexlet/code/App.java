@@ -10,6 +10,7 @@ public class App {
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
+        System.out.println("4 - GCD");
         System.out.println("0 - Exit");
         int chosenNumber = numberChoose.nextInt();
         if (chosenNumber == 1) {
@@ -20,6 +21,9 @@ public class App {
         }
         if (chosenNumber == 3) {
             Calc.calcGame();
+        }
+        if (chosenNumber == 4) {
+            GCD.greatestCommonDivisor();
         }
         if (chosenNumber == 0) {
            return;
