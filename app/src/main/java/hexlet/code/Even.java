@@ -9,8 +9,8 @@ public class Even {
     int correctAnswers = 0;
     Scanner answer = new Scanner(System.in);
     System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        boolean wrongAnswer = false;
-        while (wrongAnswer == false | correctAnswers == 3) {
+        //boolean wrongAnswer = false;
+        while (correctAnswers != 3) {
             currentValue = 1+ (int) (Math.random() * 100);
             System.out.println("Question: " + currentValue);
             String userAnswer = answer.nextLine();
@@ -21,7 +21,7 @@ public class Even {
                 correctAnswers++;
             }
             else if (currentValue % 2 != 0 && userAnswer.equals("yes")) {
-                wrongAnswer = true;
+                //wrongAnswer = true;
                 System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.");
                 return;
             }
@@ -31,7 +31,7 @@ public class Even {
                 correctAnswers ++;
             }
             else if (currentValue % 2 == 0 && userAnswer.equals("no")) {
-                wrongAnswer = true;
+                //wrongAnswer = true;
                 System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'.");
                 return;
             } //else if (correctAnswers == 3) {
@@ -40,7 +40,7 @@ public class Even {
             //}
 
         }
-        System.out.println("Congratulations," + userName + "You won!");
+        System.out.println("Congratulations," + userName + "! You won!");
         return;
     }
 }
