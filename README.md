@@ -13,4 +13,7 @@
 #Asciinema of Progression game
 [![asciicast](https://asciinema.org/a/XuKeB2xDGE32GVb6ahwrqYshK.svg)](https://asciinema.org/a/XuKeB2xDGE32GVb6ahwrqYshK)
 
+#Asciinema of Prime game
+[![asciicast](https://asciinema.org/a/w8EMJWUnPvCP2ShnS5Nh8kiSE.svg)](https://asciinema.org/a/w8EMJWUnPvCP2ShnS5Nh8kiSE)
+
 [Maintainabllity]
