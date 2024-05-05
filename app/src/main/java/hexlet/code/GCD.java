@@ -32,7 +32,7 @@ public class GCD {
             }
         System.out.println("Congratulations, " + userName + "!");
     }
-    public static int getGreatestCommonDivisor(int a, int b) {
+    private static int getGreatestCommonDivisor(int a, int b) {
         int result = 0;
         if (a <=0 || b <=0) throw new UnsupportedOperationException("Incorrect numbers");
         while (b != 0 && a != 0) {
