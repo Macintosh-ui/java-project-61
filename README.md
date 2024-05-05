@@ -10,4 +10,7 @@
 #Asciinema of GCD game
 [![asciicast](https://asciinema.org/a/UE67cSvSGtfMTj8bQTXoHaaZ2.svg)](https://asciinema.org/a/UE67cSvSGtfMTj8bQTXoHaaZ2)
 
+#Asciinema of Progression game
+[![asciicast](https://asciinema.org/a/XuKeB2xDGE32GVb6ahwrqYshK.svg)](https://asciinema.org/a/XuKeB2xDGE32GVb6ahwrqYshK)
+
 [Maintainabllity]
