@@ -12,6 +12,7 @@ public class App {
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
         System.out.println("5 - Progression");
+        System.out.println("6 - Prime");
         System.out.println("0 - Exit");
         int chosenNumber = numberChoose.nextInt();
         if (chosenNumber == 1) {
@@ -28,6 +29,9 @@ public class App {
         }
         if (chosenNumber == 5) {
             Progression.progressionGame();
+        }
+        if (chosenNumber == 6) {
+            Prime.primeGame();
         }
         if (chosenNumber == 0) {
            return;
