@@ -1,6 +1,9 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Macintosh-ui/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Macintosh-ui/java-project-61/actions)
 
+### Maintainability
+[![Maintainability](https://api.codeclimate.com/v1/badges/b00ea37f925015fa37e5/maintainability)](https://codeclimate.com/github/Macintosh-ui/java-project-61/maintainability)
+
 #Asciinema of Even game
 [![asciicast](https://asciinema.org/a/sWhirt1wHvr9bzrRbQi7U0Z1r.svg)](https://asciinema.org/a/sWhirt1wHvr9bzrRbQi7U0Z1r)
 
