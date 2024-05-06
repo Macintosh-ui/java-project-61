@@ -20,7 +20,7 @@ public class Calc {
             firstNumber = random.nextInt(100);
             secondNumber = random.nextInt(100);
             String operator = getOperator();
-           System.out.println("Question: " + firstNumber + operator + secondNumber);
+           System.out.println("Question: " + firstNumber + " " + operator + " " + secondNumber);
             result = switch (operator) {
                 case "+" -> firstNumber + secondNumber;
                 case "-" -> firstNumber - secondNumber;
