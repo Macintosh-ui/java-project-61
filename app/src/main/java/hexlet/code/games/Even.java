@@ -20,7 +20,7 @@ public class Even {
             }
             else if (currentValue % 2 != 0 && userAnswer.equals("yes")) {
                 System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.");
-                System.out.println("Let's try again, " + userName);
+                System.out.println("Let's try again, " + userName + "!");
                 return;
             }
             else if (currentValue % 2 != 0 && userAnswer.equals("no")) {
@@ -29,7 +29,7 @@ public class Even {
             }
             else if (currentValue % 2 == 0 && userAnswer.equals("no")) {
                 System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'.");
-                System.out.println("Let's try again, " + userName);
+                System.out.println("Let's try again, " + userName + "!");
                 return;
             }
             else {

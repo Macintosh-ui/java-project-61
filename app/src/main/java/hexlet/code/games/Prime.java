@@ -16,7 +16,7 @@ public class Prime {
             String userAnswer = answer.nextLine();
             if (primeCheck(number) == false && userAnswer.equals("yes")){
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was 'no'");
-                System.out.println("Let's try again, " + userName);
+                System.out.println("Let's try again, " + userName + "!");
                 return;
             }
             else if (primeCheck(number) == false && userAnswer.equals("no")) {
@@ -29,7 +29,7 @@ public class Prime {
             }
             else if (primeCheck(number) == true && userAnswer.equals("no")) {
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was 'yes'");
-                System.out.println("Let's try again, " + userName);
+                System.out.println("Let's try again, " + userName + "!");
                 return;
             }
 

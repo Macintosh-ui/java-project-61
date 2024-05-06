@@ -31,7 +31,7 @@ public class Progression {
             }
             else {
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + stringHidden + "'");
-                System.out.println("Let's try again, " + userName);
+                System.out.println("Let's try again, " + userName + "!");
                 return;
             }
             }
