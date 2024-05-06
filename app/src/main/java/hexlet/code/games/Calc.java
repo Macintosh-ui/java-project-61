@@ -32,7 +32,7 @@ public class Calc {
            System.out.println("Your answer: " + userAnswer);
             if (!userAnswer.equals(stringResult)) {
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + result + "'");
-                System.out.println("Let's try again," + userName);
+                System.out.println("Let's try again, " + userName);
                 return;
             }
                System.out.println("Correct!");

@@ -23,7 +23,7 @@ public class GCD {
             String trimmedAnswer = userAnswer.trim();
             if (!trimmedAnswer.equals(stringResult)) {
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + result + "'");
-                System.out.println("Let's try again," + userName);
+                System.out.println("Let's try again, " + userName);
                 return;
             }
             System.out.println("Correct!");
