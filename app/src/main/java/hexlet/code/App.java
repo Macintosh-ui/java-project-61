@@ -17,27 +17,26 @@ public class App {
         System.out.println("6 - Prime");
         System.out.println("0 - Exit");
         int chosenNumber = numberChoose.nextInt();
-        if (chosenNumber == 1) {
-            Cli.greeting();
+        switch (chosenNumber) {
+            case 1:
+                Cli.greeting();
+                break;
+            case 2:
+                Even.evenGame();
+                break;
+            case 3:
+                Calc.calcGame();
+                break;
+            case 4:
+                GCD.greatestCommonDivisor();
+                break;
+            case 5:
+                Progression.progressionGame();
+                break;
+            case 6:
+                Prime.primeGame();
+            default:
+                return;
         }
-        if (chosenNumber == 2) {
-            Even.evenGame();
-        }
-        if (chosenNumber == 3) {
-            Calc.calcGame();
-        }
-        if (chosenNumber == 4) {
-            GCD.greatestCommonDivisor();
-        }
-        if (chosenNumber == 5) {
-            Progression.progressionGame();
-        }
-        if (chosenNumber == 6) {
-            Prime.primeGame();
-        }
-        if (chosenNumber == 0) {
-           return;
-       }
-
     }
 }
