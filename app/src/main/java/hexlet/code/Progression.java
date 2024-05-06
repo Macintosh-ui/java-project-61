@@ -1,4 +1,4 @@
-package hexlet.code.games;
+package hexlet.code;
 
 import java.util.Scanner;
 import java.util.Random;
@@ -10,7 +10,6 @@ public class Progression {
         String userName = Cli.greeting();
         System.out.println("What number is missing in the progression?");
         int correctAnswers = 0;
-
         while (correctAnswers != 3){
             int[] numbers = getProgression();
             String[] stringNumbers = new String[numbers.length];
@@ -26,7 +25,6 @@ public class Progression {
             System.out.println(" ");
             String userAnswer = answer.nextLine();
             String stringHidden = String.valueOf(numbers[hiddenIndex]);
-            
             if (checkAnswer(stringHidden, userAnswer) == true) {
                 System.out.println("Correct!");
                 correctAnswers++;
