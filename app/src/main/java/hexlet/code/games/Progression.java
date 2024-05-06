@@ -18,7 +18,7 @@ public class Progression {
             }
             int hiddenIndex = random.nextInt(1, numbers.length);
             stringNumbers[hiddenIndex] = "..";
-            System.out.println("Question: ");
+            System.out.print("Question: ");
             for (int j = 0; j < numbers.length; j++) {
                 System.out.print(stringNumbers[j]+ " ");
             }
