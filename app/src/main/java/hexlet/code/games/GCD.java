@@ -14,8 +14,8 @@ public class GCD {
         Random random = new Random();
 
         while (correctAnswers != 3) {
-            firstNumber = random.nextInt(100);
-            secondNumber = random.nextInt(100);
+            firstNumber = random.nextInt(1,100);
+            secondNumber = random.nextInt(1,100);
             System.out.print("Question: " + firstNumber + " " + secondNumber);
             int result = getGreatestCommonDivisor(firstNumber, secondNumber);
             String stringResult = Integer.toString(result);
