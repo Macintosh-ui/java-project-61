@@ -28,7 +28,6 @@ public class GCD {
             }
             System.out.println("Correct!");
             correctAnswers++;
-
             }
         System.out.println("Congratulations, " + userName + "!");
     }

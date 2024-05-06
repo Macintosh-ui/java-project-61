@@ -10,7 +10,7 @@ public class Progression {
         String userName = Cli.greeting();
         System.out.println("What number is missing in the progression?");
         int correctAnswers = 0;
-        while (correctAnswers != 3){
+        while (correctAnswers != 3){ //цикл while вывести в отдельный метод
             int[] numbers = getProgression();
             String[] stringNumbers = new String[numbers.length];
             for (int k = 0; k < numbers.length; k++) {

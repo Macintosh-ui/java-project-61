@@ -10,7 +10,7 @@ public class Prime {
         int correctAnswers = 0;
         String userName = Cli.greeting();
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-        while (correctAnswers != 3) {
+        while (correctAnswers != 3) {  // Цикл while вывести в отедльный метод answerCheck
             int number = random.nextInt(2,100);
             System.out.println("Question: " + number);
             String userAnswer = answer.nextLine();
@@ -35,7 +35,6 @@ public class Prime {
         }
         System.out.println("Congratulations, " + userName + "!");
     }
-
     private static boolean primeCheck(int number){
         //int counter = 0;
         boolean check = false;

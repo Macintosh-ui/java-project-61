@@ -9,7 +9,7 @@ public class Even {
     int correctAnswers = 0;
     Scanner answer = new Scanner(System.in);
     System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        while (correctAnswers != 3) {
+        while (correctAnswers != 3) { //вывести цикл в отдельный метод
             currentValue = 1 + (int) (Math.random() * 100);
             System.out.println("Question: " + currentValue);
             String userAnswer = answer.nextLine();
@@ -33,9 +33,7 @@ public class Even {
             else {
                 return;
             }
-
         }
-        System.out.println("Congratulations," + userName + "! You won!");
-        return;
+        System.out.println("Congratulations," + userName + "!");
     }
 }
