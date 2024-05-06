@@ -12,7 +12,7 @@ public class GCD {
         int firstNumber;
         int secondNumber;
         Random random = new Random();
-
+        System.out.println("Find the greatest common divisor of given numbers.");
         while (correctAnswers != 3) {
             firstNumber = random.nextInt(1,100);
             secondNumber = random.nextInt(1,100);
