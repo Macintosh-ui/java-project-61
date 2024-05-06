@@ -1,4 +1,4 @@
-package hexlet.code;
+package hexlet.code.games;
 
 import java.util.Scanner;
 import java.util.Random;
@@ -35,7 +35,8 @@ public class Prime {
         }
         System.out.println("Congratulations, " + userName + "!");
     }
-    public static boolean primeCheck(int number){
+
+    private static boolean primeCheck(int number){
         //int counter = 0;
         boolean check = false;
         for (int i = 2; i < number; i++) {
