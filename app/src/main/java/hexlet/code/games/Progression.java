@@ -10,7 +10,7 @@ public class Progression {
         String userName = Cli.greeting();
         System.out.println("What number is missing in the progression?");
         int correctAnswers = 0;
-        while (correctAnswers != 3){ //цикл while вывести в отдельный метод
+        while (correctAnswers != 3){
             int[] numbers = getProgression();
             String[] stringNumbers = new String[numbers.length];
             for (int k = 0; k < numbers.length; k++) {
@@ -39,9 +39,9 @@ public class Progression {
     }
     private static int[] getProgression() {
         Random random = new Random();
-        int[] numbers = new int[random.nextInt(5, 10)];
-        int coefficient = random.nextInt(1,10);
-        numbers[0] = random.nextInt(20);
+        int[] numbers = new int[Util.getBound()];
+        int coefficient = random.nextInt(Util.getCoefficient());
+        numbers[0] = random.nextInt(Util.getFirtNumber());
         for (int i = 1; i < numbers.length; i++) {
             numbers[i] = numbers[0] + i * coefficient;
         }

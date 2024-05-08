@@ -11,11 +11,10 @@ public class GCD {
         int correctAnswers = 0;
         int firstNumber;
         int secondNumber;
-        Random random = new Random();
         System.out.println("Find the greatest common divisor of given numbers.");
         while (correctAnswers != 3) {
-            firstNumber = random.nextInt(1,100);
-            secondNumber = random.nextInt(1,100);
+            firstNumber = Util.getNumber();
+            secondNumber = Util.getNumber();
             System.out.print("Question: " + firstNumber + " " + secondNumber);
             int result = getGreatestCommonDivisor(firstNumber, secondNumber);
             String stringResult = Integer.toString(result);

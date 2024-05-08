@@ -6,6 +6,13 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
+        final int GREET = 1;
+        final int EVEN = 2;
+        final int CALC = 3;
+        final int GREATEST_COMMON_DIVISOR = 4;
+        final int PROGRESSION = 5;
+        final int PRIME = 6;
+        final int EXIT = 0;
         Scanner numberChoose = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.println("Please enter the game number and press Enter");
@@ -18,25 +25,27 @@ public class App {
         System.out.println("0 - Exit");
         int chosenNumber = numberChoose.nextInt();
         switch (chosenNumber) {
-            case 1:
+            case GREET:
                 Cli.greeting();
                 break;
-            case 2:
+            case EVEN:
                 Even.evenGame();
                 break;
-            case 3:
+            case CALC:
                 Calc.calcGame();
                 break;
-            case 4:
+            case GREATEST_COMMON_DIVISOR:
                 GCD.greatestCommonDivisor();
                 break;
-            case 5:
+            case PROGRESSION:
                 Progression.progressionGame();
                 break;
-            case 6:
+            case PRIME:
                 Prime.primeGame();
-            default:
+            case EXIT:
                 return;
+            default:
+                System.out.println("Invalid number");
         }
     }
 }

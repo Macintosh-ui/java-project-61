@@ -8,17 +8,14 @@ public class Calc {
         String userName = Cli.greeting();
         int firstNumber;
         int secondNumber;
-
-        Random random = new Random();
         Scanner answer = new Scanner(System.in);
-
         int result = 0;
         int correctAnswers = 0;
 
         System.out.println("What is the result of the expression?");
         while (correctAnswers != 3) {
-            firstNumber = random.nextInt(100);
-            secondNumber = random.nextInt(100);
+            firstNumber = Util.getNumber();
+            secondNumber = Util.getNumber();
             String operator = getOperator();
            System.out.println("Question: " + firstNumber + " " + operator + " " + secondNumber);
             result = switch (operator) {

@@ -3,39 +3,29 @@ package hexlet.code.games;
 import java.util.Scanner;
 
 public class Even {
+    final String RULES = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+
     public static void evenGame() {
     String userName = Cli.greeting();
     int currentValue;
     int correctAnswers = 0;
     Scanner answer = new Scanner(System.in);
-    System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        while (correctAnswers != 3) { //вывести цикл в отдельный метод
-            currentValue = 1 + (int) (Math.random() * 100);
-            System.out.println("Question: " + currentValue);
-            String userAnswer = answer.nextLine();
-            System.out.println("Your answer: " + userAnswer);
-            if (currentValue % 2 == 0 && userAnswer.equals("yes")) {
+        while (correctAnswers != 3) {
+            currentValue = Util.getNumber();
+            String userAnswer = Engine.questionAndAnswer(currentValue);
+            if (userAnswer.equals(isEven(currentValue))) {
                 System.out.println("Correct!");
                 correctAnswers++;
             }
-            else if (currentValue % 2 != 0 && userAnswer.equals("yes")) {
-                System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.");
-                System.out.println("Let's try again, " + userName + "!");
-                return;
-            }
-            else if (currentValue % 2 != 0 && userAnswer.equals("no")) {
-                System.out.println("Correct!");
-                correctAnswers++;
-            }
-            else if (currentValue % 2 == 0 && userAnswer.equals("no")) {
-                System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'.");
-                System.out.println("Let's try again, " + userName + "!");
-                return;
-            }
-            else {
+            else if (!userAnswer.equals(isEven(currentValue)) && isEven(currentValue).equals("no")) {
+                Engine.printGameOver(userAnswer, userName, isEven(currentValue));
                 return;
             }
         }
         System.out.println("Congratulations, " + userName + "!");
+    }
+    private static String isEven(int number){
+        if(number % 2 == 0) return "yes";
+        return "no";
     }
 }
