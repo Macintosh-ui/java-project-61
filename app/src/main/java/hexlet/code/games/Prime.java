@@ -13,7 +13,7 @@ public class Prime {
             int number = Util.getPrimeNumber();
             System.out.println("Question: " + number);
             String userAnswer = answer.nextLine();
-            String correctAnswer = primeCheck();
+            String correctAnswer = primeCheck(number);
             if (!userAnswer.equals(correctAnswer)){
                 Engine.printGameOver(userAnswer, userName, correctAnswer);
                 return;
