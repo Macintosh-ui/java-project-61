@@ -1,18 +1,14 @@
 package hexlet.code.games;
-
-import java.util.Scanner;
-
 public class Even {
-    final String RULES = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-
+    static final String RULES = "Answer 'yes' if the number is even, otherwise answer 'no'.";
     public static void evenGame() {
     String userName = Cli.greeting();
     int currentValue;
     int correctAnswers = 0;
-    Scanner answer = new Scanner(System.in);
+    System.out.println(RULES);
         while (correctAnswers != 3) {
             currentValue = Util.getNumber();
-            String userAnswer = Engine.questionAndAnswer(currentValue);
+            String userAnswer = Engine.questionAndAnswer(currentValue, RULES);
             if (userAnswer.equals(isEven(currentValue))) {
                 System.out.println("Correct!");
                 correctAnswers++;

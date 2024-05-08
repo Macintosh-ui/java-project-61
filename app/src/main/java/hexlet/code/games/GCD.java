@@ -1,28 +1,19 @@
 package hexlet.code.games;
 
-import java.util.Scanner;
-import java.util.Random;
-
 public class GCD {
-
+private static final String RULES = "Find the greatest common divisor of given numbers.";
     public static void greatestCommonDivisor() {
         String userName = Cli.greeting();
-        Scanner answer = new Scanner(System.in);
         int correctAnswers = 0;
-        int firstNumber;
-        int secondNumber;
-        System.out.println("Find the greatest common divisor of given numbers.");
+        System.out.println();
         while (correctAnswers != 3) {
-            firstNumber = Util.getNumber();
-            secondNumber = Util.getNumber();
-            System.out.print("Question: " + firstNumber + " " + secondNumber);
-            int result = getGreatestCommonDivisor(firstNumber, secondNumber);
-            String stringResult = Integer.toString(result);
-            String userAnswer = answer.nextLine();
-            String trimmedAnswer = userAnswer.trim();
-            if (!trimmedAnswer.equals(stringResult)) {
-                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + result + "'");
-                System.out.println("Let's try again, " + userName + "!");
+            int firstNumber = Util.getNumber();
+            int secondNumber = Util.getNumber();
+            String currentValue = firstNumber + " " + secondNumber;
+            String userAnswer = Engine.questionAndAnswer(currentValue, RULES);
+            String result = getGreatestCommonDivisor(firstNumber, secondNumber);
+            if (!userAnswer.equals(result)) {
+                Engine.printGameOver(userAnswer, userName, result);
                 return;
             }
             System.out.println("Correct!");
@@ -30,8 +21,8 @@ public class GCD {
             }
         System.out.println("Congratulations, " + userName + "!");
     }
-    private static int getGreatestCommonDivisor(int a, int b) {
-        int result = 0;
+    private static String getGreatestCommonDivisor(int a, int b) {
+        String result = "";
         if (a <=0 || b <=0) throw new UnsupportedOperationException("Incorrect numbers");
         while (b != 0 && a != 0) {
             if (a>b) {
@@ -40,7 +31,7 @@ public class GCD {
             else {
                 b = b%a;
             }
-            result = a + b;
+            result = String.valueOf(a + b);
         }
 
         return result;

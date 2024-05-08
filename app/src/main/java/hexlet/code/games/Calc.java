@@ -4,37 +4,25 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Calc {
+    final static String RULES = "What is the result of the expression?";
     public static void calcGame(){
         String userName = Cli.greeting();
         int firstNumber;
         int secondNumber;
-        Scanner answer = new Scanner(System.in);
-        int result = 0;
         int correctAnswers = 0;
-
-        System.out.println("What is the result of the expression?");
         while (correctAnswers != 3) {
             firstNumber = Util.getNumber();
             secondNumber = Util.getNumber();
             String operator = getOperator();
-           System.out.println("Question: " + firstNumber + " " + operator + " " + secondNumber);
-            result = switch (operator) {
-                case "+" -> firstNumber + secondNumber;
-                case "-" -> firstNumber - secondNumber;
-                case "*" -> firstNumber * secondNumber;
-                default -> result;
-            };
-           String stringResult = Integer.toString(result);
-           String userAnswer = answer.nextLine();
-           System.out.println("Your answer: " + userAnswer);
-            if (!userAnswer.equals(stringResult)) {
-                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + result + "'");
-                System.out.println("Let's try again, " + userName + "!");
+            String question = firstNumber + " " + operator + " " + secondNumber;
+            String userAnswer = Engine.questionAndAnswer(question, RULES);
+            String result = getAnswer(firstNumber, secondNumber, operator);
+            if (!userAnswer.equals(result)) {
+                Engine.printGameOver(userAnswer, userName, result);
                 return;
             }
                System.out.println("Correct!");
                correctAnswers++;
-
         }
         System.out.println("Congratulations, " + userName + "!");
     }
@@ -44,5 +32,18 @@ public class Calc {
         Random random = new Random();
         int i = random.nextInt(3);
         return operators[i];
+    }
+    private static String getAnswer(int firstNumber, int secondNumber, String operator){
+        int result = 0;
+        switch (operator) {
+            case "+": result = firstNumber + secondNumber;
+            break;
+            case "-": result = firstNumber - secondNumber;
+            break;
+            case "*": result = firstNumber * secondNumber;
+            break;
+            default: System.out.println("Invalid operator");
+        }
+        return Integer.toString(result);
     }
 }
