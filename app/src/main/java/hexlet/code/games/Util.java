@@ -28,4 +28,9 @@ public class Util {
         int result = rand.nextInt(2, 100);
         return result;
     }
+    public static int getHiddenIndex(int length){
+        Random rand = new Random();
+        int result = rand.nextInt(length);
+        return result;
+    }
 }

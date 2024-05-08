@@ -5,8 +5,6 @@ import java.util.Random;
 
 public class Progression {
     public static void progressionGame() {
-        Scanner answer = new Scanner(System.in);
-        Random random = new Random();
         String userName = Cli.greeting();
         System.out.println("What number is missing in the progression?");
         int correctAnswers = 0;
@@ -16,22 +14,16 @@ public class Progression {
             for (int k = 0; k < numbers.length; k++) {
                 stringNumbers[k] = String.valueOf(numbers[k]);
             }
-            int hiddenIndex = random.nextInt(1, numbers.length);
+            int hiddenIndex = Util.getHiddenIndex(numbers.length);
             stringNumbers[hiddenIndex] = "..";
-            System.out.print("Question: ");
-            for (int j = 0; j < numbers.length; j++) {
-                System.out.print(stringNumbers[j]+ " ");
-            }
-            System.out.println(" ");
-            String userAnswer = answer.nextLine();
+            String userAnswer = Engine.progressionQuestion(stringNumbers);
             String stringHidden = String.valueOf(numbers[hiddenIndex]);
-            if (checkAnswer(stringHidden, userAnswer) == true) {
+            if (checkAnswer(stringHidden, userAnswer)) {
                 System.out.println("Correct!");
                 correctAnswers++;
             }
             else {
-                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + stringHidden + "'");
-                System.out.println("Let's try again, " + userName + "!");
+                Engine.printGameOver(userAnswer, userName, stringHidden);
                 return;
             }
             }

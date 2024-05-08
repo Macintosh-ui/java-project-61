@@ -31,4 +31,14 @@ public class Engine {
         System.out.println("Your answer: " + userAnswer);
         return userAnswer;
     }
+    public static String progressionQuestion(String[] question){
+        Scanner answer = new Scanner(System.in);
+        System.out.println("Question: ");
+        for (int j = 0; j < question.length; j++) {
+            System.out.print(question[j]+ " ");
+        }
+        String userAnswer = answer.nextLine();
+        System.out.println("Your answer: " + userAnswer);
+        return userAnswer;
+    }
 }
