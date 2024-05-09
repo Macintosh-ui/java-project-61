@@ -5,7 +5,6 @@ public class Even {
     String userName = Cli.greeting();
     int currentValue;
     int correctAnswers = 0;
-    System.out.println(RULES);
         while (correctAnswers != 3) {
             currentValue = Util.getNumber();
             String userAnswer = Engine.questionAndAnswer(currentValue, RULES);
@@ -13,7 +12,7 @@ public class Even {
                 System.out.println("Correct!");
                 correctAnswers++;
             }
-            else if (!userAnswer.equals(isEven(currentValue)) && isEven(currentValue).equals("no")) {
+            else if (!userAnswer.equals(isEven(currentValue))) {
                 Engine.printGameOver(userAnswer, userName, isEven(currentValue));
                 return;
             }
