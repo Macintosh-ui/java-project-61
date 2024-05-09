@@ -42,7 +42,7 @@ public class Engine {
     }
     public static String progressionQuestion(String[] question){
         Scanner answer = new Scanner(System.in);
-        System.out.println("Question: ");
+        System.out.print("Question: ");
         for (int j = 0; j < question.length; j++) {
             System.out.print(question[j]+ " ");
         }
