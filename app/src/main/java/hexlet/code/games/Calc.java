@@ -7,10 +7,9 @@ public class Calc {
     final static String RULES = "What is the result of the expression?";
     public static void calcGame(){
         String userName = Cli.greeting();
-        int firstNumber;
-        int secondNumber;
+        int firstNumber, secondNumber;
         int correctAnswers = 0;
-        while (correctAnswers != 3) {
+        while (correctAnswers != Engine.NUMBER_OF_QUESTIONS) {
             firstNumber = Util.getNumber();
             secondNumber = Util.getNumber();
             String operator = getOperator();
@@ -26,14 +25,14 @@ public class Calc {
         }
         System.out.println("Congratulations, " + userName + "!");
     }
-    private static String getOperator(){
+    private static String getOperator() {
         String[] operators;
         operators = new String[]{"-", "+", "*"};
         Random random = new Random();
         int i = random.nextInt(3);
         return operators[i];
     }
-    private static String getAnswer(int firstNumber, int secondNumber, String operator){
+    private static String getAnswer(int firstNumber, int secondNumber, String operator) {
         int result = 0;
         switch (operator) {
             case "+": result = firstNumber + secondNumber;

@@ -3,28 +3,13 @@ package hexlet.code.games;
 import java.util.Scanner;
 
 public class Engine {
-    public final int NUMBER_OF_QUESTIONS = 3;
-    private static String userName;
+    public static final int NUMBER_OF_QUESTIONS = 3;
 
-    public static void getUserName() {
-        Scanner scanner = new Scanner(System.in);
-        userName = scanner.nextLine();
-    }
-    public static void greet() {
-        System.out.println("Welcome to the Brain Games!");
-        System.out.println("May I have your name? ");
-        getUserName();
-        System.out.println("Hello, " + userName + "!");
-    }
-    public static void gameStart() {
-        greet();
-
-    }
-    public static void printGameOver(String userAnswer, String userName, String correctAnswer){
+    public static void printGameOver(String userAnswer, String userName, String correctAnswer) {
         System.out.println("'" + userAnswer + "' " + "is wrong answer ;(. Correct answer was '" + correctAnswer + "'");
         System.out.println("Let's try again, " + userName + "!");
     }
-    public static String questionAndAnswer(int currentValue, String rules){
+    public static String questionAndAnswer(int currentValue, String rules) {
         Scanner answer = new Scanner(System.in);
         System.out.println(rules);
         System.out.println("Question: " + currentValue);
@@ -32,7 +17,7 @@ public class Engine {
         System.out.println("Your answer: " + userAnswer);
         return userAnswer;
     }
-    public static String questionAndAnswer(String currentValue, String rules){
+    public static String questionAndAnswer(String currentValue, String rules) {
         Scanner answer = new Scanner(System.in);
         System.out.println(rules);
         System.out.println("Question: " + currentValue);
@@ -40,17 +25,17 @@ public class Engine {
         System.out.println("Your answer: " + userAnswer);
         return userAnswer;
     }
-    public static String progressionQuestion(String[] question){
+    public static String progressionQuestion(String[] question) {
         Scanner answer = new Scanner(System.in);
         System.out.print("Question: ");
         for (int j = 0; j < question.length; j++) {
-            System.out.print(question[j]+ " ");
+            System.out.print(question[j] + " ");
         }
         String userAnswer = answer.nextLine();
         System.out.println("Your answer: " + userAnswer);
         return userAnswer;
     }
-    public static void printGames(){
+    public static void printGames() {
         System.out.println("Welcome to the Brain Games!");
         System.out.println("Please enter the game number and press Enter");
         System.out.println("1 - Greet");

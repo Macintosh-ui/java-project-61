@@ -7,7 +7,7 @@ public class Progression {
         String userName = Cli.greeting();
         System.out.println("What number is missing in the progression?");
         int correctAnswers = 0;
-        while (correctAnswers != 3){
+        while (correctAnswers != Engine.NUMBER_OF_QUESTIONS){
             int[] numbers = getProgression();
             String[] stringNumbers = new String[numbers.length];
             for (int k = 0; k < numbers.length; k++) {
@@ -19,12 +19,10 @@ public class Progression {
             String stringHidden = String.valueOf(numbers[hiddenIndex]);
             if (checkAnswer(stringHidden, userAnswer)) {
                 System.out.println("Correct!");
-                correctAnswers++;
-            }
+                correctAnswers++; }
             else {
                 Engine.printGameOver(userAnswer, userName, stringHidden);
-                return;
-            }
+                return; }
             }
         System.out.println("Congratulations, " + userName + "!");
     }
@@ -39,11 +37,6 @@ public class Progression {
         return numbers;
     }
     private static boolean checkAnswer(String question, String answer) {
-        if (answer.equals(question)) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return answer.equals(question);
     }
 }

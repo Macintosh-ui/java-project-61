@@ -5,13 +5,13 @@ import hexlet.code.games.*;
 import java.util.Scanner;
 
 public class App {
-    private final static int GREET = 1;
-    private final static int EVEN = 2;
-    private final static int CALC = 3;
-    private final static int GREATEST_COMMON_DIVISOR = 4;
-    private final static int PROGRESSION = 5;
-    private final static int PRIME = 6;
-    private final static int EXIT = 0;
+    private static final  int GREET = 1;
+    private static final  int EVEN = 2;
+    private static final  int CALC = 3;
+    private static final  int GREATEST_COMMON_DIVISOR = 4;
+    private static final  int PROGRESSION = 5;
+    private static final  int PRIME = 6;
+    private static final  int EXIT = 0;
     public static void main(String[] args) {
         Scanner numberChoose = new Scanner(System.in);
         Engine.printGames();
