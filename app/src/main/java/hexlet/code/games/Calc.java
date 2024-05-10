@@ -1,13 +1,14 @@
 package hexlet.code.games;
 
 import java.util.Random;
-import java.util.Scanner;
 
 public class Calc {
-    final static String RULES = "What is the result of the expression?";
-    public static void calcGame(){
+    private static final String RULES = "What is the result of the expression?";
+    private static final int OPERATORS_COUNT = 3;
+    public static void calcGame() {
         String userName = Cli.greeting();
-        int firstNumber, secondNumber;
+        int firstNumber;
+        int secondNumber;
         int correctAnswers = 0;
         while (correctAnswers != Engine.NUMBER_OF_QUESTIONS) {
             firstNumber = Util.getNumber();
@@ -29,7 +30,7 @@ public class Calc {
         String[] operators;
         operators = new String[]{"-", "+", "*"};
         Random random = new Random();
-        int i = random.nextInt(3);
+        int i = random.nextInt(OPERATORS_COUNT);
         return operators[i];
     }
     private static String getAnswer(int firstNumber, int secondNumber, String operator) {

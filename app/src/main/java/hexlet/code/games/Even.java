@@ -10,16 +10,17 @@ public class Even {
             String userAnswer = Engine.questionAndAnswer(currentValue, RULES);
             if (userAnswer.equals(isEven(currentValue))) {
                 System.out.println("Correct!");
-                correctAnswers++; }
-            else if (!userAnswer.equals(isEven(currentValue))) {
+                correctAnswers++;
+            } else if (!userAnswer.equals(isEven(currentValue))) {
                 Engine.printGameOver(userAnswer, userName, isEven(currentValue));
-                return; }
+                return;
+            }
         }
         System.out.println("Congratulations, " + userName + "!");
     }
-    private static String isEven(int number){
+    private static String isEven(int number) {
         if (number % 2 == 0) {
-            return "yes"; }
-        return "no";
+            return "yes";
+        } return "no";
     }
 }

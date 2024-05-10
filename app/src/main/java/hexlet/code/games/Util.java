@@ -12,33 +12,26 @@ public class Util {
     private static final Random RANDOM = new Random();
 
     public static int getNumber() {
-        int result = RANDOM.nextInt(MAX_BOUND);
-        return result;
+        return RANDOM.nextInt(MAX_BOUND);
     }
 
-    public static int getCoefficient(){
-        int result = RANDOM.nextInt(MAX_ORIGIN, MIDDLE_BOUND);
-        return result;
+    public static int getCoefficient() {
+        return RANDOM.nextInt(MAX_ORIGIN, MIDDLE_BOUND);
     }
 
     public static int getBound() {
-        int result = RANDOM.nextInt(MAX_ORIGIN, MIDDLE_BOUND);
-        return result;
+        return RANDOM.nextInt(MAX_ORIGIN, MIDDLE_BOUND);
     }
 
     public static int getFirtNumber() {
-        int result = RANDOM.nextInt(FIRST_NUMBER_BOUND);
-        return result;
+        return RANDOM.nextInt(FIRST_NUMBER_BOUND);
     }
 
     public static int getPrimeNumber() {
-
-        int result = RANDOM.nextInt(MIN_ORIGIN,MAX_BOUND);
-        return result;
+        return RANDOM.nextInt(MIN_ORIGIN, MAX_BOUND);
     }
 
     public static int getHiddenIndex(int length) {
-        int result = RANDOM.nextInt(length);
-        return result;
+        return RANDOM.nextInt(length);
     }
 }

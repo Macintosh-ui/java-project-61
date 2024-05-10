@@ -22,7 +22,9 @@ private static final String RULES = "Find the greatest common divisor of given n
     }
     private static String getGreatestCommonDivisor(int a, int b) {
         String result = "";
-        if (a <= 0 || b <= 0) throw new UnsupportedOperationException("Incorrect numbers");
+        if (a <= 0 || b <= 0) {
+            throw new UnsupportedOperationException("Incorrect numbers");
+        }
         while (b != 0 && a != 0) {
             if (a > b) {
                 a = a % b;
