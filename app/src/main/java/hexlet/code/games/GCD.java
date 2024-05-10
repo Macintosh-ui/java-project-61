@@ -28,8 +28,7 @@ private static final String RULES = "Find the greatest common divisor of given n
         while (b != 0 && a != 0) {
             if (a > b) {
                 a = a % b;
-            }
-            else {
+            } else {
                 b = b % a;
             }
             result = String.valueOf(a + b);

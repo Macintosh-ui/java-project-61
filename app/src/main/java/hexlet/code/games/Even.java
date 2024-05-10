@@ -21,6 +21,7 @@ public class Even {
     private static String isEven(int number) {
         if (number % 2 == 0) {
             return "yes";
-        } return "no";
+        }
+        return "no";
     }
 }
