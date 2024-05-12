@@ -23,14 +23,16 @@ public class Prime {
 
     private static String primeCheck(int number) {
         String correctAnswer = "";
-        for (int i = 2; i <= number; i++) {
-            if (number % i == 0) {
-               correctAnswer = "no";
-               break;
-            } else if (number % i != 0) {
+        if (number < 2) {
+            correctAnswer = "no";
+        }
+        for (int i = 2; i <= number / 2; i++) {
+            if(number % i == 0) {
                 correctAnswer = "yes";
             }
         }
         return correctAnswer;
+        }
+
     }
 }
