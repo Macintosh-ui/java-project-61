@@ -23,7 +23,7 @@ public class Prime {
 
     private static String primeCheck(int number) {
         String correctAnswer = "";
-        for (int i = 2; i < number; i++) {
+        for (int i = 2; i <= number; i++) {
             if (number % i == 0) {
                correctAnswer = "no";
                break;
