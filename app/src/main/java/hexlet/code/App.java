@@ -17,10 +17,10 @@ public class App {
     private static final  int PROGRESSION = 5;
     private static final  int PRIME = 6;
     private static final  int EXIT = 0;
+    private static final Scanner NUMBER_CHOOSE = new Scanner(System.in);
     public static void main(String[] args) {
-        Scanner numberChoose = new Scanner(System.in);
         Engine.printGames();
-        int chosenNumber = numberChoose.nextInt();
+        int chosenNumber = App.NUMBER_CHOOSE.nextInt();
         switch (chosenNumber) {
             case GREET:
                 Cli.greeting();

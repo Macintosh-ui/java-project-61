@@ -1,16 +1,15 @@
 package hexlet.code.games;
 
+
 public class Progression {
+    private static final String RULES = "What number is missing in the progression?";
     public static void progressionGame() {
         String userName = Cli.greeting();
-        System.out.println("What number is missing in the progression?");
+        System.out.println(RULES);
         int correctAnswers = 0;
         while (correctAnswers != Engine.NUMBER_OF_QUESTIONS) {
             int[] numbers = getProgression();
-            String[] stringNumbers = new String[numbers.length];
-            for (int k = 0; k < numbers.length; k++) {
-                stringNumbers[k] = String.valueOf(numbers[k]);
-            }
+            String[] stringNumbers = intToStringArray(numbers);
             int hiddenIndex = Util.getHiddenIndex(numbers.length);
             stringNumbers[hiddenIndex] = "..";
             String userAnswer = Engine.progressionQuestion(stringNumbers);
@@ -24,6 +23,13 @@ public class Progression {
             }
         }
         System.out.println("Congratulations, " + userName + "!");
+    }
+    private static String[] intToStringArray(int[] numbers) {
+        String[] stringNumbers = new String[numbers.length];
+        for (int i = 0; i < numbers.length; i++) {
+            stringNumbers[i] = String.valueOf(numbers[i]);
+        }
+        return stringNumbers;
     }
     private static int[] getProgression() {
         int[] numbers = new int[Util.getBound()];
