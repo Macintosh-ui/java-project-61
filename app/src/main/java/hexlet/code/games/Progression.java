@@ -10,19 +10,19 @@ public class Progression {
     public static void progressionGame() {
             int[] numbers = getProgression();
             String[] stringNumbers = intToStringArray(numbers);
-            int hiddenIndex = Util.getHiddenIndex(numbers.length);
+            int hiddenIndex = Util.getHiddenIndex(numbers.length - 1);
             String firstAnswer = stringNumbers[hiddenIndex];
             stringNumbers[hiddenIndex] = "..";
             String firstQuestion = Arrays.toString(stringNumbers).replace("[", "").replace("]", "").replace(",", "");
             int[] numbers2 = getProgression();
             String[] stringNumbers2 = intToStringArray(numbers2);
-            int hiddenIndex2 = Util.getHiddenIndex(numbers.length);
+            int hiddenIndex2 = Util.getHiddenIndex(numbers.length - 1);
             String secondAnswer = stringNumbers2[hiddenIndex2];
             stringNumbers2[hiddenIndex2] = "..";
             String secondQuestion = Arrays.toString(stringNumbers2).replace("[", "").replace("]", "").replace(",", "");;
             int[] numbers3 = getProgression();
             String[] stringNumbers3 = intToStringArray(numbers3);
-            int hiddenIndex3 = Util.getHiddenIndex(numbers3.length);
+            int hiddenIndex3 = Util.getHiddenIndex(numbers3.length - 1);
             String thirdAnswer = stringNumbers3[hiddenIndex3];
             stringNumbers3[hiddenIndex3] = "..";
             String thirdQuestion = Arrays.toString(stringNumbers3).replace("[", "").replace("]", "").replace(",", "");
