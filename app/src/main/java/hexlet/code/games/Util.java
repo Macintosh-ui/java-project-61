@@ -7,7 +7,7 @@ public class Util {
     private static final int MAX_BOUND = 100;
     private static final int MIDDLE_BOUND = 10;
     private static final int FIRST_NUMBER_BOUND = 20;
-    private static final int MAX_ORIGIN = 5;
+    private static final int MAX_ORIGIN = 6;
     private static final int MIN_ORIGIN = 2;
     private static final Random RANDOM = new Random();
 

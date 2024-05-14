@@ -13,19 +13,19 @@ public class Progression {
             int hiddenIndex = Util.getHiddenIndex(numbers.length);
             String firstAnswer = stringNumbers[hiddenIndex];
             stringNumbers[hiddenIndex] = "..";
-            String firstQuestion = Arrays.toString(stringNumbers).replace("[", "").replace("]", "");
+            String firstQuestion = Arrays.toString(stringNumbers).replace("[", "").replace("]", "").replace(",", "");
             int[] numbers2 = getProgression();
             String[] stringNumbers2 = intToStringArray(numbers2);
             int hiddenIndex2 = Util.getHiddenIndex(numbers.length);
             String secondAnswer = stringNumbers2[hiddenIndex2];
             stringNumbers2[hiddenIndex2] = "..";
-            String secondQuestion = Arrays.toString(stringNumbers2).replace("[", "").replace("]", "");;
+            String secondQuestion = Arrays.toString(stringNumbers2).replace("[", "").replace("]", "").replace(",", "");;
             int[] numbers3 = getProgression();
             String[] stringNumbers3 = intToStringArray(numbers3);
             int hiddenIndex3 = Util.getHiddenIndex(numbers3.length);
             String thirdAnswer = stringNumbers3[hiddenIndex3];
             stringNumbers3[hiddenIndex3] = "..";
-            String thirdQuestion = Arrays.toString(stringNumbers3).replace("[", "").replace("]", "");
+            String thirdQuestion = Arrays.toString(stringNumbers3).replace("[", "").replace("]", "").replace(",", "");
             Engine.engineGame(firstQuestion, secondQuestion, thirdQuestion, firstAnswer, secondAnswer, thirdAnswer, RULES);
     }
     private static String[] intToStringArray(int[] numbers) {
