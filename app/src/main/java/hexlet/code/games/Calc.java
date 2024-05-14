@@ -25,7 +25,7 @@ public class Calc {
             secondNumber = Util.getNumber();
             String thirdQuestion = firstNumber + " " + operator + " " + secondNumber;
             String thirdAnswer = getAnswer(firstNumber, secondNumber, operator);
-            Engine.engineGame(firstQuestion, secondQuestion, thirdQuestion, firstAnswer, secondAnswer, thirdAnswer, RULES);
+Engine.engineGame(firstQuestion, secondQuestion, thirdQuestion, firstAnswer, secondAnswer, thirdAnswer, RULES);
     }
     private static String getOperator() {
         String[] operators;

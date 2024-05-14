@@ -11,7 +11,9 @@ public class Engine {
         System.out.println("Let's try again, " + userName + "!");
     }
 
-    public static void engineGame(String firstQuestion, String secondQuestion, String thirdQuestion, String correctAnswer1, String correctAnswer2, String correctAnswer3, String rules) {
+public static void engineGame(String firstQuestion, String secondQuestion, String thirdQuestion,
+                              String correctAnswer1, String correctAnswer2, String correctAnswer3,
+                              String rules) {
         Scanner scanner = new Scanner(System.in);
         String userName = Cli.greeting();
         System.out.println(rules);

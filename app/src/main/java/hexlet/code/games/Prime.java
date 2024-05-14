@@ -14,7 +14,7 @@ public class Prime {
             number = Util.getPrimeNumber();
             String thirdQuestion = String.valueOf(number);
             String thirdAnswer = primeCheck(number);
-            Engine.engineGame(firstQuestion, secondQuestion, thirdQuestion, firstAnswer, secondAnswer, thirdAnswer, RULES);
+Engine.engineGame(firstQuestion, secondQuestion, thirdQuestion, firstAnswer, secondAnswer, thirdAnswer, RULES);
     }
 
     private static String primeCheck(int number) {

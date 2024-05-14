@@ -17,7 +17,7 @@ private static final String RULES = "Find the greatest common divisor of given n
             secondNumber = Util.getNumber();
             String thirdQuestion = firstNumber + " " + secondNumber;
             String thirdAnswer = getGreatestCommonDivisor(firstNumber, secondNumber);
-            Engine.engineGame(firstQuestion, secondQuestion, thirdQuestion, firstAnswer, secondAnswer, thirdAnswer, RULES);
+Engine.engineGame(firstQuestion, secondQuestion, thirdQuestion, firstAnswer, secondAnswer, thirdAnswer, RULES);
     }
     private static String getGreatestCommonDivisor(int a, int b) {
         String result = "";

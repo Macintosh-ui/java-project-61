@@ -19,14 +19,14 @@ public class Progression {
             int hiddenIndex2 = Util.getHiddenIndex(numbers.length - 1);
             String secondAnswer = stringNumbers2[hiddenIndex2];
             stringNumbers2[hiddenIndex2] = "..";
-            String secondQuestion = Arrays.toString(stringNumbers2).replace("[", "").replace("]", "").replace(",", "");;
+            String secondQuestion = Arrays.toString(stringNumbers2).replace("[", "").replace("]", "").replace(",", "");
             int[] numbers3 = getProgression();
             String[] stringNumbers3 = intToStringArray(numbers3);
             int hiddenIndex3 = Util.getHiddenIndex(numbers3.length - 1);
             String thirdAnswer = stringNumbers3[hiddenIndex3];
             stringNumbers3[hiddenIndex3] = "..";
             String thirdQuestion = Arrays.toString(stringNumbers3).replace("[", "").replace("]", "").replace(",", "");
-            Engine.engineGame(firstQuestion, secondQuestion, thirdQuestion, firstAnswer, secondAnswer, thirdAnswer, RULES);
+Engine.engineGame(firstQuestion, secondQuestion, thirdQuestion, firstAnswer, secondAnswer, thirdAnswer, RULES);
     }
     private static String[] intToStringArray(int[] numbers) {
         String[] stringNumbers = new String[numbers.length];
