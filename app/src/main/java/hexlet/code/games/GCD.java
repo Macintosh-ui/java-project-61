@@ -1,24 +1,23 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
+
 public class GCD {
 private static final String RULES = "Find the greatest common divisor of given numbers.";
     public static void greatestCommonDivisor() {
-        String userName = Cli.greeting();
-        int correctAnswers = 0;
-        while (correctAnswers != Engine.NUMBER_OF_QUESTIONS) {
             int firstNumber = Util.getNumber();
             int secondNumber = Util.getNumber();
-            String currentValue = firstNumber + " " + secondNumber;
-            String userAnswer = Engine.questionAndAnswer(currentValue, RULES);
-            String result = getGreatestCommonDivisor(firstNumber, secondNumber);
-            if (!userAnswer.equals(result)) {
-                Engine.printGameOver(userAnswer, userName, result);
-                return;
-            }
-            System.out.println("Correct!");
-            correctAnswers++;
-            }
-        System.out.println("Congratulations, " + userName + "!");
+            String firstQuestion = firstNumber + " " + secondNumber;
+            String firstAnswer = getGreatestCommonDivisor(firstNumber, secondNumber);
+            firstNumber = Util.getNumber();
+            secondNumber = Util.getNumber();
+            String secondQuestion = secondNumber + " " + firstNumber;
+            String secondAnswer = getGreatestCommonDivisor(secondNumber, firstNumber);
+            firstNumber = Util.getNumber();
+            secondNumber = Util.getNumber();
+            String thirdQuestion = firstNumber + " " + secondNumber;
+            String thirdAnswer = getGreatestCommonDivisor(firstNumber, secondNumber);
+            Engine.engineGame(firstQuestion, secondQuestion, thirdQuestion, firstAnswer, secondAnswer, thirdAnswer, RULES);
     }
     private static String getGreatestCommonDivisor(int a, int b) {
         String result = "";

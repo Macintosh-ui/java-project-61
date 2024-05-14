@@ -1,30 +1,31 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
+
 import java.util.Random;
 
 public class Calc {
     private static final String RULES = "What is the result of the expression?";
     private static final int OPERATORS_COUNT = 3;
     public static void calcGame() {
-        String userName = Cli.greeting();
         int firstNumber;
         int secondNumber;
-        int correctAnswers = 0;
-        while (correctAnswers != Engine.NUMBER_OF_QUESTIONS) {
             firstNumber = Util.getNumber();
             secondNumber = Util.getNumber();
             String operator = getOperator();
-            String question = firstNumber + " " + operator + " " + secondNumber;
-            String userAnswer = Engine.questionAndAnswer(question, RULES);
-            String result = getAnswer(firstNumber, secondNumber, operator);
-            if (!userAnswer.equals(result)) {
-                Engine.printGameOver(userAnswer, userName, result);
-                return;
-            }
-               System.out.println("Correct!");
-               correctAnswers++;
-        }
-        System.out.println("Congratulations, " + userName + "!");
+            String firstQuestion = firstNumber + " " + operator + " " + secondNumber;
+            String firstAnswer = getAnswer(firstNumber, secondNumber, operator);
+            firstNumber = Util.getNumber();
+            operator = getOperator();
+            secondNumber = Util.getNumber();
+            String secondQuestion = firstNumber + " " + operator + " " + secondNumber;
+            String secondAnswer = getAnswer(firstNumber, secondNumber, operator);
+            firstNumber = Util.getNumber();
+            operator = getOperator();
+            secondNumber = Util.getNumber();
+            String thirdQuestion = firstNumber + " " + operator + " " + secondNumber;
+            String thirdAnswer = getAnswer(firstNumber, secondNumber, operator);
+            Engine.engineGame(firstQuestion, secondQuestion, thirdQuestion, firstAnswer, secondAnswer, thirdAnswer, RULES);
     }
     private static String getOperator() {
         String[] operators;

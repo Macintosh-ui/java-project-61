@@ -1,23 +1,23 @@
 package hexlet.code.games;
+
+import hexlet.code.Engine;
+
 public class Even {
     static final String RULES = "Answer 'yes' if the number is even, otherwise answer 'no'.";
     public static void evenGame() {
-    String userName = Cli.greeting();
     int currentValue;
-    int correctAnswers = 0;
-        while (correctAnswers != Engine.NUMBER_OF_QUESTIONS) {
             currentValue = Util.getNumber();
-            String userAnswer = Engine.questionAndAnswer(currentValue, RULES);
-            if (userAnswer.equals(isEven(currentValue))) {
-                System.out.println("Correct!");
-                correctAnswers++;
-            } else if (!userAnswer.equals(isEven(currentValue))) {
-                Engine.printGameOver(userAnswer, userName, isEven(currentValue));
-                return;
-            }
-        }
-        System.out.println("Congratulations, " + userName + "!");
+            String firstQuestion = String.valueOf(currentValue);
+            String firstAnswer = isEven(currentValue);
+            currentValue = Util.getNumber();
+            String secondQuestion = String.valueOf(currentValue);
+            String secondAnswer = isEven(currentValue);
+            currentValue = Util.getNumber();
+            String thirdQuestion = String.valueOf(currentValue);
+            String thirdAnswer = isEven(currentValue);
+            Engine.engineGame(firstQuestion, secondQuestion, thirdQuestion, firstAnswer, secondAnswer, thirdAnswer, RULES);
     }
+
     private static String isEven(int number) {
         if (number % 2 == 0) {
             return "yes";

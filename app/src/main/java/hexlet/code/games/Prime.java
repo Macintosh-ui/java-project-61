@@ -1,24 +1,20 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
+
 public class Prime {
     private static final String RULES = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     public static void primeGame() {
-        int correctAnswers = 0;
-        String userName = Cli.greeting();
-        System.out.println();
-        while (correctAnswers != Engine.NUMBER_OF_QUESTIONS) {
             int number = Util.getPrimeNumber();
-            String userAnswer = Engine.questionAndAnswer(number, RULES);
-            String correctAnswer = primeCheck(number);
-            if (!userAnswer.equals(correctAnswer)) {
-                Engine.printGameOver(userAnswer, userName, correctAnswer);
-                return;
-            } else if (userAnswer.equals(correctAnswer)) {
-                System.out.println("Correct!");
-                correctAnswers++;
-            }
-        }
-        System.out.println("Congratulations, " + userName + "!");
+            String firstQuestion = String.valueOf(number);
+            String firstAnswer = primeCheck(number);
+            number = Util.getPrimeNumber();
+            String secondQuestion = String.valueOf(number);
+            String secondAnswer = primeCheck(number);
+            number = Util.getPrimeNumber();
+            String thirdQuestion = String.valueOf(number);
+            String thirdAnswer = primeCheck(number);
+            Engine.engineGame(firstQuestion, secondQuestion, thirdQuestion, firstAnswer, secondAnswer, thirdAnswer, RULES);
     }
 
     private static String primeCheck(int number) {
