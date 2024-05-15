@@ -5,12 +5,7 @@ import hexlet.code.games.Cli;
 import java.util.Scanner;
 
 public class Engine {
-
-    public static void printGameOver(String userAnswer, String userName, String correctAnswer) {
-        System.out.println("'" + userAnswer + "' " + "is wrong answer ;(. Correct answer was '" + correctAnswer + "'");
-        System.out.println("Let's try again, " + userName + "!");
-    }
-
+public static final int ROUNDS_COUNT = 3;
 public static void engineGame(String firstQuestion, String secondQuestion, String thirdQuestion,
                               String correctAnswer1, String correctAnswer2, String correctAnswer3,
                               String rules) {
@@ -22,7 +17,8 @@ public static void engineGame(String firstQuestion, String secondQuestion, Strin
             if (userAnswer.equals(correctAnswer1)) {
                 System.out.println("Correct!");
             } else {
-                printGameOver(userAnswer, userName, correctAnswer1);
+                System.out.println("'" + userAnswer + "' " + "is wrong answer ;(. Correct answer was '" + correctAnswer1 + "'");
+                System.out.println("Let's try again, " + userName + "!");
                 return;
             }
             System.out.println("Question: " + secondQuestion);
@@ -30,7 +26,8 @@ public static void engineGame(String firstQuestion, String secondQuestion, Strin
             if (userAnswer.equals(correctAnswer2)) {
                 System.out.println("Correct!");
             } else {
-                printGameOver(userAnswer, userName, correctAnswer2);
+                System.out.println("'" + userAnswer + "' " + "is wrong answer ;(. Correct answer was '" + correctAnswer2 + "'");
+                System.out.println("Let's try again, " + userName + "!");
                 return;
             }
             System.out.println("Question: " + thirdQuestion);
@@ -38,7 +35,8 @@ public static void engineGame(String firstQuestion, String secondQuestion, Strin
             if (userAnswer.equals(correctAnswer3)) {
                 System.out.println("Correct!");
             } else {
-                printGameOver(userAnswer, userName, correctAnswer3);
+                System.out.println("'" + userAnswer + "' " + "is wrong answer ;(. Correct answer was '" + correctAnswer3 + "'");
+                System.out.println("Let's try again, " + userName + "!");
                 return;
             }
         System.out.println("Congratulations, " + userName + "!");

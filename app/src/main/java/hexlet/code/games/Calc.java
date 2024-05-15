@@ -7,9 +7,17 @@ import java.util.Random;
 public class Calc {
     private static final String RULES = "What is the result of the expression?";
     private static final int OPERATORS_COUNT = 3;
+    private static final int COLUMNS = 2;
     public static void calcGame() {
-        int firstNumber;
-        int secondNumber;
+        String[][] questionsAnswers = new String[Engine.ROUNDS_COUNT][COLUMNS];
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
+            for (int j = 0; j < COLUMNS; j++) {
+                int firstNumber = Util.getNumber();
+                int secondNumber = Util.getNumber();
+                String operator = getOperator();
+            }
+        }
+
             firstNumber = Util.getNumber();
             secondNumber = Util.getNumber();
             String operator = getOperator();
