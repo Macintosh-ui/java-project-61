@@ -9,7 +9,6 @@ import hexlet.code.games.Prime;
 import java.util.Scanner;
 
 public class App {
-
     private static final Scanner NUMBER_CHOOSE = new Scanner(System.in);
     public static void main(String[] args) {
         printGames();
@@ -21,7 +20,7 @@ public class App {
             case "4" -> GCD.greatestCommonDivisor();
             case "5" -> Progression.progressionGame();
             case "6" -> Prime.primeGame();
-            case "0" -> {}
+            case "0" -> { }
             default -> System.out.println("Invalid number");
         }
     }
