@@ -5,16 +5,13 @@ import hexlet.code.Engine;
 public class Prime {
     private static final String RULES = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     public static void primeGame() {
+        String[][] questionsAnswers = new String[Engine.ROUNDS_COUNT][Engine.COLUMNS];
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             int number = Util.getPrimeNumber();
-            String firstQuestion = String.valueOf(number);
-            String firstAnswer = primeCheck(number);
-            number = Util.getPrimeNumber();
-            String secondQuestion = String.valueOf(number);
-            String secondAnswer = primeCheck(number);
-            number = Util.getPrimeNumber();
-            String thirdQuestion = String.valueOf(number);
-            String thirdAnswer = primeCheck(number);
-Engine.engineGame(firstQuestion, secondQuestion, thirdQuestion, firstAnswer, secondAnswer, thirdAnswer, RULES);
+            questionsAnswers[i][0] = String.valueOf(number);
+            questionsAnswers[i][1] = primeCheck(number);
+        }
+        Engine.engineGame(questionsAnswers, RULES);
     }
 
     private static String primeCheck(int number) {

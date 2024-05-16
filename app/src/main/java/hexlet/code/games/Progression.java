@@ -1,32 +1,21 @@
 package hexlet.code.games;
 
-
 import hexlet.code.Engine;
-
 import java.util.Arrays;
 
 public class Progression {
     private static final String RULES = "What number is missing in the progression?";
     public static void progressionGame() {
+        String[][] questionsAnswers = new String[Engine.ROUNDS_COUNT][Engine.COLUMNS];
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             int[] numbers = getProgression();
             String[] stringNumbers = intToStringArray(numbers);
             int hiddenIndex = Util.getHiddenIndex(numbers.length - 1);
-            String firstAnswer = stringNumbers[hiddenIndex];
             stringNumbers[hiddenIndex] = "..";
-            String firstQuestion = Arrays.toString(stringNumbers).replace("[", "").replace("]", "").replace(",", "");
-            int[] numbers2 = getProgression();
-            String[] stringNumbers2 = intToStringArray(numbers2);
-            int hiddenIndex2 = Util.getHiddenIndex(numbers.length - 1);
-            String secondAnswer = stringNumbers2[hiddenIndex2];
-            stringNumbers2[hiddenIndex2] = "..";
-            String secondQuestion = Arrays.toString(stringNumbers2).replace("[", "").replace("]", "").replace(",", "");
-            int[] numbers3 = getProgression();
-            String[] stringNumbers3 = intToStringArray(numbers3);
-            int hiddenIndex3 = Util.getHiddenIndex(numbers3.length - 1);
-            String thirdAnswer = stringNumbers3[hiddenIndex3];
-            stringNumbers3[hiddenIndex3] = "..";
-            String thirdQuestion = Arrays.toString(stringNumbers3).replace("[", "").replace("]", "").replace(",", "");
-Engine.engineGame(firstQuestion, secondQuestion, thirdQuestion, firstAnswer, secondAnswer, thirdAnswer, RULES);
+            questionsAnswers[i][0] = Arrays.toString(stringNumbers).replace("[", "").replace("]", "").replace(",", "");
+            questionsAnswers[i][1] = String.valueOf(numbers[hiddenIndex]);
+        }
+        Engine.engineGame(questionsAnswers, RULES);
     }
     private static String[] intToStringArray(int[] numbers) {
         String[] stringNumbers = new String[numbers.length];
@@ -43,8 +32,5 @@ Engine.engineGame(firstQuestion, secondQuestion, thirdQuestion, firstAnswer, sec
             numbers[i] = numbers[0] + i * coefficient;
         }
         return numbers;
-    }
-    private static boolean checkAnswer(String question, String answer) {
-        return answer.equals(question);
     }
 }

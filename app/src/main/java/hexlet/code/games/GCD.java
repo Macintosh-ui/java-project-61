@@ -5,19 +5,14 @@ import hexlet.code.Engine;
 public class GCD {
 private static final String RULES = "Find the greatest common divisor of given numbers.";
     public static void greatestCommonDivisor() {
+        String[][] questionsAnswers = new String[Engine.ROUNDS_COUNT][Engine.COLUMNS];
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             int firstNumber = Util.getNumber();
             int secondNumber = Util.getNumber();
-            String firstQuestion = firstNumber + " " + secondNumber;
-            String firstAnswer = getGreatestCommonDivisor(firstNumber, secondNumber);
-            firstNumber = Util.getNumber();
-            secondNumber = Util.getNumber();
-            String secondQuestion = secondNumber + " " + firstNumber;
-            String secondAnswer = getGreatestCommonDivisor(secondNumber, firstNumber);
-            firstNumber = Util.getNumber();
-            secondNumber = Util.getNumber();
-            String thirdQuestion = firstNumber + " " + secondNumber;
-            String thirdAnswer = getGreatestCommonDivisor(firstNumber, secondNumber);
-Engine.engineGame(firstQuestion, secondQuestion, thirdQuestion, firstAnswer, secondAnswer, thirdAnswer, RULES);
+            questionsAnswers[i][0] = firstNumber + " " + secondNumber;
+            questionsAnswers[i][1] = getGreatestCommonDivisor(firstNumber, secondNumber);
+        }
+        Engine.engineGame(questionsAnswers, RULES);
     }
     private static String getGreatestCommonDivisor(int a, int b) {
         String result = "";

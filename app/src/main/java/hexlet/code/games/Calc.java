@@ -7,33 +7,17 @@ import java.util.Random;
 public class Calc {
     private static final String RULES = "What is the result of the expression?";
     private static final int OPERATORS_COUNT = 3;
-    private static final int COLUMNS = 2;
-    public static void calcGame() {
-        String[][] questionsAnswers = new String[Engine.ROUNDS_COUNT][COLUMNS];
-        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
-            for (int j = 0; j < COLUMNS; j++) {
-                int firstNumber = Util.getNumber();
-                int secondNumber = Util.getNumber();
-                String operator = getOperator();
-            }
-        }
 
-            firstNumber = Util.getNumber();
-            secondNumber = Util.getNumber();
+    public static void calcGame() {
+        String[][] questionsAnswers = new String[Engine.ROUNDS_COUNT][Engine.COLUMNS];
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
+            int firstNumber = Util.getNumber();
+            int secondNumber = Util.getNumber();
             String operator = getOperator();
-            String firstQuestion = firstNumber + " " + operator + " " + secondNumber;
-            String firstAnswer = getAnswer(firstNumber, secondNumber, operator);
-            firstNumber = Util.getNumber();
-            operator = getOperator();
-            secondNumber = Util.getNumber();
-            String secondQuestion = firstNumber + " " + operator + " " + secondNumber;
-            String secondAnswer = getAnswer(firstNumber, secondNumber, operator);
-            firstNumber = Util.getNumber();
-            operator = getOperator();
-            secondNumber = Util.getNumber();
-            String thirdQuestion = firstNumber + " " + operator + " " + secondNumber;
-            String thirdAnswer = getAnswer(firstNumber, secondNumber, operator);
-Engine.engineGame(firstQuestion, secondQuestion, thirdQuestion, firstAnswer, secondAnswer, thirdAnswer, RULES);
+            questionsAnswers[i][0] = firstNumber + " " + operator + " " + secondNumber;
+            questionsAnswers[i][1] = getAnswer(firstNumber, secondNumber, operator);
+        }
+        Engine.engineGame(questionsAnswers, RULES);
     }
     private static String getOperator() {
         String[] operators;
