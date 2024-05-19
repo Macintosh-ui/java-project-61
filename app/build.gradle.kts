@@ -1,6 +1,6 @@
 plugins {
-    java;
-    application;
+    java
+    application
     //checkstyle;
 }
 
@@ -20,7 +20,7 @@ tasks.test {
     useJUnitPlatform()
 }
 application {
-    mainClass = "hexlet.code.App";
+    mainClass = "hexlet.code.App"
 }
 
 tasks.getByName("run", JavaExec::class) {

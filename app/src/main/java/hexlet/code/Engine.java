@@ -1,6 +1,5 @@
 package hexlet.code;
 
-import hexlet.code.games.Cli;
 import java.util.Scanner;
 
 public class Engine {
@@ -9,13 +8,17 @@ public class Engine {
 
     public static void engineGame(String[][] questionsAnswers, String rules) {
         Scanner scanner = new Scanner(System.in);
-        String userName = Cli.greeting();
+        System.out.println("May I have your name? ");
+        String userName = scanner.nextLine();
+        System.out.println("Hello, " + userName + "!");
         System.out.println(rules);
         for (int i = 0; i < ROUNDS_COUNT; i++) {
             System.out.println("Question: " + questionsAnswers[i][0]);
             String userAnswer = scanner.nextLine();
             if (!userAnswer.equals(questionsAnswers[i][1])) {
-System.out.println("'" + userAnswer + "' " + "is wrong answer ;(. Correct answer was '" + questionsAnswers[i][1] + "'");
+                System.out.print("'" + userAnswer + "' " + "is wrong answer ;(.");
+                System.out.print(" Correct answer was '" + questionsAnswers[i][1] + "'");
+                System.out.println();
                 System.out.println("Let's try again, " + userName + "!");
                 return;
             } else {
