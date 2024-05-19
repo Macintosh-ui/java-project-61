@@ -4,15 +4,15 @@ import hexlet.code.Engine;
 import hexlet.code.Util;
 
 public class GCD {
-    private static final int MAX_BOUND = 100;
+    private static final int BOUND = 100;
     private static final String RULES = "Find the greatest common divisor of given numbers.";
     private static final int NO_NULL = 1;
 
     public static void greatestCommonDivisor() {
         String[][] questionsAnswers = new String[Engine.ROUNDS_COUNT][Engine.COLUMNS];
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
-            int firstNumber = Util.getNumber(MAX_BOUND, NO_NULL);
-            int secondNumber = Util.getNumber(MAX_BOUND, NO_NULL);
+            int firstNumber = Util.getNumber(NO_NULL, BOUND);
+            int secondNumber = Util.getNumber(NO_NULL, BOUND);
             questionsAnswers[i][0] = firstNumber + " " + secondNumber;
             questionsAnswers[i][1] = String.valueOf(getGreatestCommonDivisor(firstNumber, secondNumber));
         }
