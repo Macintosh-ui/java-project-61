@@ -1,3 +1,11 @@
+### Welcome to the Brain Games! ###
+This is a project which contains five console games:
+1) Even game | Guess if given number is even
+2) Calculator game | Calculate given expression
+3) Greatest common divisior game | Find the greatest common divisior of given numbers
+4) Progression game | Guess which number is missing in the given progression
+5) Prime game | Guess if given number is prime
+   
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Macintosh-ui/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Macintosh-ui/java-project-61/actions)
 
