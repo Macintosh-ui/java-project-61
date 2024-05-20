@@ -5,7 +5,7 @@ This is a project which contains five console games:
 3) Greatest common divisior game -> Find the greatest common divisior of given numbers
 4) Progression game -> Guess which number is missing in the given progression
 5) Prime game -> Guess if given number is prime
-
+***
 ## Requirements ##
 Java 21+
 Operating system based on Unix
