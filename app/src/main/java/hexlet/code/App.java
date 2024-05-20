@@ -21,8 +21,7 @@ public class App {
             case "4" -> GCD.playGcdGame();
             case "5" -> Progression.playProgressionGame();
             case "6" -> Prime.playPrimeGame();
-            case "0" -> {
-            }
+            case "0" -> { }
             default -> System.out.println("Invalid number");
         }
     }
