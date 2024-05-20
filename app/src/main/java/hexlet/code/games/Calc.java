@@ -7,7 +7,7 @@ public class Calc {
     private static final String RULES = "What is the result of the expression?";
     private static final int MAX_BOUND = 100;
 
-    public static void calcGame() {
+    public static void playCalcGame() {
         String[][] questionsAnswers = new String[Engine.ROUNDS_COUNT][Engine.COLUMNS];
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             int firstNumber = Util.getNumber(MAX_BOUND);
@@ -28,13 +28,17 @@ public class Calc {
     private static int getAnswer(int firstNumber, int secondNumber, String operator) {
         int result = 0;
         switch (operator) {
-            case "+": result = firstNumber + secondNumber;
-            break;
-            case "-": result = firstNumber - secondNumber;
-            break;
-            case "*": result = firstNumber * secondNumber;
-            break;
-            default: System.out.println("Invalid operator");
+            case "+":
+                result = firstNumber + secondNumber;
+                break;
+            case "-":
+                result = firstNumber - secondNumber;
+                break;
+            case "*":
+                result = firstNumber * secondNumber;
+                break;
+            default:
+                System.out.println("Invalid operator");
         }
         return result;
     }

@@ -8,7 +8,7 @@ public class Prime {
     private static final int PRIME_ORIGIN = 2;
     private static final int PRIME_BOUND = 100;
 
-    public static void primeGame() {
+    public static void playPrimeGame() {
         String[][] questionsAnswers = new String[Engine.ROUNDS_COUNT][Engine.COLUMNS];
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             int number = Util.getNumber(PRIME_ORIGIN, PRIME_BOUND);
@@ -24,19 +24,14 @@ public class Prime {
     }
 
     private static boolean primeCheck(int number) {
-        boolean correctAnswer = false;
         if (number < 2) {
-            return correctAnswer;
+            return true;
         }
         for (int i = 2; i < number; i++) {
             if (number % i == 0) {
-                correctAnswer = false;
-                break;
-            } else if (number % i != 0) {
-                correctAnswer = true;
+                return false;
             }
         }
-        return correctAnswer;
+        return true;
     }
-
-    }
+}

@@ -9,7 +9,7 @@ public class Progression {
     private static final int FIRST_NUMBER_BOUND = 20;
     private static final String RULES = "What number is missing in the progression?";
 
-    public static void progressionGame() {
+    public static void playProgressionGame() {
         String[][] questionsAnswers = new String[Engine.ROUNDS_COUNT][Engine.COLUMNS];
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             int coefficient = Util.getNumber(ORIGIN, BOUND);

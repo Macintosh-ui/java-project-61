@@ -8,7 +8,7 @@ public class GCD {
     private static final String RULES = "Find the greatest common divisor of given numbers.";
     private static final int NO_NULL = 1;
 
-    public static void greatestCommonDivisor() {
+    public static void playGcdGame() {
         String[][] questionsAnswers = new String[Engine.ROUNDS_COUNT][Engine.COLUMNS];
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             int firstNumber = Util.getNumber(NO_NULL, BOUND);
