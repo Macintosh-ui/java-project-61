@@ -7,8 +7,7 @@ This is a project which contains five console games:
 5) Prime game -> Guess if given number is prime
 ***
 ## Requirements ##
-Java 21+
-Operating system based on Unix
+Java 21+ and operating system based on Unix
 ***
 ### Hexlet tests:
 [![Actions Status](https://github.com/Macintosh-ui/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Macintosh-ui/java-project-61/actions)
