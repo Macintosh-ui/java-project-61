@@ -13,11 +13,7 @@ public class Even {
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             int currentValue = Util.getNumber(NO_NULL, BOUND);
             questionsAnswers[i][0] = String.valueOf(currentValue);
-            if (isEven(currentValue)) {
-                questionsAnswers[i][1] = "yes";
-            } else {
-                questionsAnswers[i][1] = "no";
-            }
+            questionsAnswers[i][1] = isEven(currentValue) ? "yes" : "no";
         }
         Engine.engineGame(questionsAnswers, RULES);
     }

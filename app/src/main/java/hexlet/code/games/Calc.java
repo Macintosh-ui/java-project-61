@@ -28,17 +28,10 @@ public class Calc {
     private static int getAnswer(int firstNumber, int secondNumber, String operator) {
         int result = 0;
         switch (operator) {
-            case "+":
-                result = firstNumber + secondNumber;
-                break;
-            case "-":
-                result = firstNumber - secondNumber;
-                break;
-            case "*":
-                result = firstNumber * secondNumber;
-                break;
-            default:
-                System.out.println("Invalid operator");
+            case "+" -> result = firstNumber + secondNumber;
+            case "-" -> result = firstNumber - secondNumber;
+            case "*" -> result = firstNumber * secondNumber;
+            default -> System.out.println("Invalid operator");
         }
         return result;
     }
